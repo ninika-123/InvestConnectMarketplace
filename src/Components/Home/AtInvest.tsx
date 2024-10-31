@@ -5,9 +5,9 @@ export default function AtInvest() {
         data-aos="fade-left"
         className="max-w-[1150px] mx-auto text-center px-4"
       >
-        {/*<h2 className="text-5xl font-bold mb-4">
-          Our Unique Selling Proposition (USP)
-        </h2>*/}
+        <h2 className="text-4xl font-bold mb-4 text-primary">
+          Financial Conduct Authority (FCA) regulations
+        </h2>
         <p className="text-xl mt-12 mb-8  mx-auto text-justify ">
           At Invest Connect Marketplace, we prioritize full compliance with
           Financial Conduct Authority (FCA) regulations. All prospective

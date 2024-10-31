@@ -13,8 +13,12 @@ const services = [
     description:
       "Our experienced accountants provide comprehensive financial management, ensuring accurate bookkeeping, tax preparation, and strategic financial advice to keep your business on track.",
     data: [
-      "Accountants (financial statements, bookkeeping, tax compliance)",
-      "Tax Advisors (personal and corporate tax strategies)",
+      "Accountants ",
+      "financial statements, bookkeeping,",
+      "tax compliance",
+      "Tax Advisors",
+      "personal and",
+      " corporate tax strategies",
       "Certified Public Accountants (CPA)",
       "Auditors",
     ],
@@ -26,7 +30,10 @@ const services = [
       "Our solicitors specialize in legal matters, offering expert guidance in contract negotiations, compliance, and dispute resolution to protect your interests and navigate complex regulations.",
 
     data: [
-      "Solicitors & Lawyers (corporate law, intellectual property, contract law)",
+      "Solicitors & Lawyers",
+      "corporate law,  ",
+      "intellectual property,",
+      "contract law",
       "Compliance Specialists (FCA compliance, regulatory guidance)",
       "Will Services & Estate Planning",
       "Patent Attorneys",
@@ -54,8 +61,11 @@ const services = [
     description:
       "We offer a range of insurance solutions to safeguard your business against unforeseen risks, ensuring you have the right coverage to protect your assets and operations.",
     data: [
-      "Business Consultants (strategic planning, business development)",
-      "Operations & Process Improvement Consultants",
+      "Business Consultants",
+      "strategic planning,",
+      "business development",
+      "Operations & Process",
+      "Improvement Consultants",
       "Change Management Specialists",
       "Project Managers",
     ],
@@ -66,7 +76,8 @@ const services = [
     description:
       "Our will providers assist you in creating legally binding documents that outline your wishes, ensuring peace of mind for you and your loved ones regarding your estate.",
     data: [
-      "Marketing Consultants (strategic and digital marketing)",
+      "Marketing Consultants",
+      "strategic and digital marketing",
       "Brand Strategists",
       "Public Relations Consultants",
       "Content & Copywriting Experts",
@@ -78,7 +89,9 @@ const services = [
     description:
       "Our valuation experts assess your business's worth, providing accurate and detailed reports to support investment decisions, mergers, acquisitions, or financing needs.",
     data: [
-      "Insurance Brokers (business insurance, liability)",
+      "Insurance Brokers",
+      "business insurance,",
+      "liability",
       "Risk Assessment Consultants",
       "Health & Safety Consultants",
     ],
@@ -101,7 +114,8 @@ const services = [
     description:
       "Our solicitors specialize in legal matters, offering expert guidance in contract negotiations, compliance, and dispute resolution to protect your interests and navigate complex regulations.",
     data: [
-      "IT Consultants (systems integration, network security)",
+      "IT Consultants systems integration,",
+      "network security",
       "Cybersecurity Experts",
       "Cloud Computing Specialists",
       "Software Development Firms",
@@ -133,14 +147,14 @@ export default function ProfessionalServices() {
               <h3 className="text-2xl font-semibold text-center mb-4">
                 {service.title}
               </h3>
-              <div className="flex flex-wrap gap-1 justify-center">
+              <div className="flex flex-wrap gap-5 justify-center">
                 {service.data
                   ? service.data.map((item) => (
                       <p>
                         {" "}
                         <span
                           key={index}
-                          className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-[8px]"
+                          className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full "
                         >
                           {item}
                         </span>
