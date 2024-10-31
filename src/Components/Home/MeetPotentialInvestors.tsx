@@ -1,13 +1,15 @@
-import investor from "../../assets/MeetPotentialInvestors/investor.jpg";
 import { useState } from "react";
-import { MapPin, Briefcase, TrendingUp, DollarSign, X } from "lucide-react";
+import { MapPin, Briefcase, TrendingUp, X } from "lucide-react";
+import img1 from "../../assets/share/1.jpg";
+import img2 from "../../assets/share/2.jpg";
+import img3 from "../../assets/share/3.jpg";
 
 const investors = [
   {
     id: 1,
-    name: "Richard M.",
+    name: "INV20211",
     location: "London, United Kingdom",
-    image: investor,
+    image: img1,
     investmentRange: "£0 - £100,000",
     background:
       "20+ years in private equity, then an operator (CEO, Chair and NED).",
@@ -21,9 +23,9 @@ const investors = [
   },
   {
     id: 2,
-    name: "Sarah L.",
+    name: "INV21212",
     location: "Manchester, United Kingdom",
-    image: investor,
+    image: img2,
     investmentRange: "£50,000 - £250,000",
     background:
       "15+ years in tech startups, serial entrepreneur, and angel investor.",
@@ -37,9 +39,9 @@ const investors = [
   },
   {
     id: 3,
-    name: "James K.",
+    name: "INV51213",
     location: "Edinburgh, United Kingdom",
-    image: investor,
+    image: img3,
     investmentRange: "£25,000 - £150,000",
     background: "18+ years in fintech, former CTO, and active angel investor.",
     expertise: [
@@ -59,7 +61,7 @@ export default function MeetPotentialInvestors() {
     <section className="bg-gradient-to-br from-primary to-red-700 text-white py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-5xl font-bold text-center mb-4">
-          Meet Potential Investors
+          Meet Our Investors
         </h2>
         <p className="text-2xl text-center mb-12">
           Discover curated UK investors ready to fuel your entrepreneurial
@@ -72,11 +74,11 @@ export default function MeetPotentialInvestors() {
               key={investor.id}
               className="bg-white rounded-lg shadow-xl overflow-hidden transform hover:scale-105 transition-transform duration-300"
             >
-              <div className="relative h-48 bg-gray-200">
+              <div className="relative h-[350px] bg-gray-200">
                 <img
                   src={investor.image}
                   alt={investor.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-center object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
                   <h3 className="text-2xl font-bold text-white">
@@ -90,7 +92,6 @@ export default function MeetPotentialInvestors() {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-4">
-                  <DollarSign className="w-5 h-5 text-green-500 mr-2" />
                   <span className="text-gray-700 font-semibold">
                     {investor.investmentRange}
                   </span>
@@ -114,7 +115,7 @@ export default function MeetPotentialInvestors() {
                 </div>
                 <button
                   onClick={() => setActiveInvestor(investor.id)}
-                  className="mt-6 inline-block mx-auto bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-300 flex items-center justify-center text-xl"
+                  className="mt-6 flex mx-auto bg-red-600 text-white px-6 py-1 font-semibold rounded-full hover:bg-red-700 transition duration-300 items-center justify-center text-lg "
                 >
                   <TrendingUp className="w-5 h-5 mr-2" />
                   View Full Profile
@@ -125,11 +126,11 @@ export default function MeetPotentialInvestors() {
         </div>
 
         <div className="text-center mt-16">
-          <p className="text-3xl mb-8 italic">
+          <p className="text-2xl mb-8 italic">
             "Connect with thousands of investors ready to shape your idea and
             fuel your growth."
           </p>
-          <button className="bg-white text-red-600 hover:bg-red-100 font-bold py-4 px-10 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+          <button className="bg-white text-red-600 hover:bg-red-100 font-bold py-2 px-10 rounded-full text-lg transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
             Explore All Investor Profiles
           </button>
         </div>

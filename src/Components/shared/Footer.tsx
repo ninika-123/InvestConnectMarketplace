@@ -44,7 +44,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-wrap lg:w-auto w-full sm:mt-0 mt-2 lg:justify-end justify-center items-start">
+          <div className="flex flex-wrap lg:w-auto w-full sm:mt-0 mt-2 lg:justify-end justify-center items-center">
             {links.map((link) => (
               <a
                 href="#"
@@ -53,7 +53,7 @@ export default function Footer() {
                 p-2
       hover:bg-gray-500
       rounded-full
-     text-2xl
+     text-lg
      shadow-md
       text-primary
       mr-3
@@ -67,7 +67,7 @@ export default function Footer() {
               >
                 {link.icons}
               </a>
-            ))}
+            ))}{" "}
           </div>
           {/*  */}
         </div>
@@ -92,7 +92,7 @@ export default function Footer() {
           <div className="flex-grow flex flex-wrap md:mt-0 mt-10">
             <div className="lg:w-1/4 w-full lg:mb-0 mb-24 lg:pr-4">
               <div className="w-full flex-shrink-0 md:mx-0 mx-auto">
-                <h2 className="font-medium text-white tracking-normal text-4xl mb-6">
+                <h2 className="font-medium text-white tracking-normal text-3xl mb-6">
                   Latest Blogs{" "}
                 </h2>
                 <ul className="list-none flex items-center gap-3 flex-col ">
@@ -102,7 +102,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -118,7 +118,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -133,7 +133,7 @@ export default function Footer() {
             </div>
             <div className="lg:w-3/4 w-full flex flex-wrap lg:flex-nowrap lg:gap-x-4">
               <div className="w-full">
-                <h2 className="font-medium text-white tracking-normal text-4xl mb-6">
+                <h2 className="font-medium text-white tracking-normal text-3xl mb-6">
                   Navigation{" "}
                 </h2>
                 <ul className="list-none mb-10">
@@ -143,7 +143,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -158,7 +158,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -173,7 +173,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -188,7 +188,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -204,7 +204,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -219,7 +219,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -234,7 +234,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -249,7 +249,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -262,7 +262,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="w-full">
-                <h2 className="font-medium text-white tracking-normal text-4xl mb-6">
+                <h2 className="font-medium text-white tracking-normal text-3xl mb-6">
                   Entrepreneur{" "}
                 </h2>
                 <ul className="list-none mb-10">
@@ -272,7 +272,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -287,7 +287,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -302,7 +302,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -314,7 +314,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="w-full">
-                <h2 className="font-medium text-white tracking-normal text-4xl mb-6">
+                <h2 className="font-medium text-white tracking-normal text-3xl mb-6">
                   Investor
                 </h2>
                 <ul className="list-none mb-10">
@@ -324,7 +324,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -339,7 +339,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -354,7 +354,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -366,7 +366,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="w-full">
-                <h2 className="font-medium text-white tracking-normal text-4xl mb-6">
+                <h2 className="font-medium text-white tracking-normal text-3xl mb-6">
                   Service Providers
                 </h2>
                 <ul className="list-none mb-10">
@@ -376,7 +376,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -391,7 +391,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -406,7 +406,7 @@ export default function Footer() {
               lg:py-0.5
               py-2
               block
-                                    text-2xl
+                                    text-lg
                 text-white
                                   hover:text-gray-300
           "
@@ -418,10 +418,19 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
+            <div className="sm:border border-white flex-col sm:flex-row flex items-center lg:w-1/2 ml-auto w-full space-y-4 sm:space-y-0 justify-end  ">
+              <input
+                className="border border-white sm:border-transparent text-base w-full font-medium leading-none text-white p-4 focus:outline-none bg-transparent placeholder-white"
+                placeholder="Email Address"
+              />
+              <button className="focus:outline-none focus:ring-offset-2 focus:ring border border-white sm:border-transparent w-full sm:w-auto bg-white py-4 px-6 hover:bg-opacity-75 text-primary font-bold">
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
-        <div className="mx-auto px-4 flex flex-wrap lg:flex-row flex-col lg:justify-between lg:items-center lg:gap-0 gap-5 text-white">
-          <ul className="flex lg:flex-row lg:w-3/4 flex-col items-center gap-x-3 list-none">
+        <div className="mx-auto px-4 grid md:grid-cols-2  lg:justify-between lg:items-center lg:gap-0 gap-5 text-white">
+          {/* <ul className="flex lg:flex-row lg:w-3/4 flex-col items-center gap-x-3 list-none">
             <li>
               <a
                 className="
@@ -478,10 +487,7 @@ export default function Footer() {
                 Refunds
               </a>
             </li>
-          </ul>
-          <p className="lg:w-1/4 text-legacy-footer-link text-xs lg:text-left text-center">
-            © 2024
-          </p>
+          </ul> */}
         </div>
       </div>
     </footer>

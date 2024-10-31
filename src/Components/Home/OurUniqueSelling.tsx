@@ -1,11 +1,11 @@
 export default function OurUniqueSelling() {
   return (
-    <section className="bg-gray-100 py-10 ">
-      <div className="container mx-auto text-center px-4">
-        <h2 className="text-5xl font-bold mb-4">
+    <section className="bg-slate-300 py-20 ">
+      <div data-aos="fade-right" className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold mb-4 text-center">
           Our Unique Selling Proposition (USP)
         </h2>
-        <p className="text-2xl mt-12 mb-8  mx-auto text-justify text-center">
+        <p className="text-2xl mt-12 mb-8  mx-auto ">
           Invest Connect Marketplace is the first angel investment platform
           designed with a three-pillar user model to serve investors,
           entrepreneurs, and professional service providers. By bringing these

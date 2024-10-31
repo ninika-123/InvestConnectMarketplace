@@ -5,47 +5,47 @@ import img from "../../assets/share/investor1.jpg";
 const defaultPitchDecks = [
   {
     id: 1,
-    name: "Renda",
-    location: "London, United Kingdom",
+    name: "Gyral Psychology Model",
+    location: "W. Midlands, United Kingdom",
     description:
-      "Renda is an AI-enabled online bathroom showroom, disrupting a £13bn European industry that has struggled since 2018 as modern consumers have moved online.",
+      "The Gyral Psychology Model is already deployed supporting mental health conversations with plans to scale into corporate psychological health, performance and productivity. Join us as we grow within - a 2030 $8BN SOM (22% CAGR) in a $93BN TAM.",
     metrics: [
-      "£350k bathroom product revenue since launch",
-      "AI-enabled showroom with 15,000+ bathroom SKUs available to consumers",
-      "Supplier relationships in place with leading manufacturers",
+      "Ground-breaking Psychology Model enriching human-computer interactions",
+      "Over 100 defensible trade secret assets",
+      "15x ROI within 4 years",
     ],
-    funding: { raised: "£300,000", seeking: "£5,000" },
-    image: img,
+    funding: { raised: "£150,000", seeking: "£5,000" },
+    image: "https://www.angelinvestmentnetwork.co.uk/media/image/671a43e98f278",
   },
 
   {
     id: 2,
-    name: "Renda",
-    location: "London, United Kingdom",
+    name: "Haatch EIS Fund",
+    location: "East Midlands, United Kingdom",
     description:
-      "Renda is an AI-enabled online bathroom showroom, disrupting a £13bn European industry that has struggled since 2018 as modern consumers have moved online.",
+      "Haatch EIS Fund is an award-winning Fund offering deployment into 4-6 companies, focused on seed-stage B2B SaaS businesses that have defined customer profile, are solving real pain points and are doing a minimum of £10k Monthly Recurring Revenue.",
     metrics: [
-      "£350k bathroom product revenue since launch",
-      "AI-enabled showroom with 15,000+ bathroom SKUs available to consumers",
-      "Supplier relationships in place with leading manufacturers",
+      "Focus on early-stage B2B SaaS businesses",
+      "All opportunities are currently at least £10k Monthly Recurring Revenue",
+      "Successfully achieved an exit from the Haatch portfolio for 276x",
     ],
-    funding: { raised: "£300,000", seeking: "£5,000" },
-    image: img,
+    funding: { raised: "£500,000", seeking: "£20,000" },
+    image: "https://www.angelinvestmentnetwork.co.uk/media/image/6491adb28bc4d",
   },
 
   {
     id: 3,
-    name: "Renda",
+    name: "LUNA London",
     location: "London, United Kingdom",
     description:
-      "Renda is an AI-enabled online bathroom showroom, disrupting a £13bn European industry that has struggled since 2018 as modern consumers have moved online.",
+      "The average person spends 55 minutes per day in front of their mirror. Yet, the $4.8B mirror industry is still outdated & boring. We're spearheading the future of the personal mirror device. Tech-forward & disruptive, that customers love using daily.",
     metrics: [
-      "£350k bathroom product revenue since launch",
-      "AI-enabled showroom with 15,000+ bathroom SKUs available to consumers",
-      "Supplier relationships in place with leading manufacturers",
+      "£1.5m+ worth of mirrors sold while bootstrapped",
+      "Featured in a Netflix film starring Kevin Hart",
+      "40,000+ customers worldwide",
     ],
-    funding: { raised: "£300,000", seeking: "£5,000" },
-    image: img,
+    funding: { raised: "£250,000", seeking: "£10,000" },
+    image: "https://www.angelinvestmentnetwork.co.uk/media/image/6708d16248518",
   },
 
   {
@@ -83,19 +83,19 @@ export default function InvestorPitchDeckShowcase({
     setCurrentIndex((prev) => (prev + decksPerPage) % pitchDecks.length);
   const prevDecks = () =>
     setCurrentIndex(
-      (prev) => (prev - decksPerPage + pitchDecks.length) % pitchDecks.length,
+      (prev) => (prev - decksPerPage + pitchDecks.length) % pitchDecks.length
     );
 
   const currentDecks = [...pitchDecks, ...pitchDecks] // Duplicate to simulate infinity
     .slice(currentIndex, currentIndex + decksPerPage);
 
   return (
-    <section className="bg-gradient-to-br from-primary to-red-700 text-white py-16">
+    <section className="bg-white text-primary py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold text-center -mt-5 pb-10">
+        <h2 className="text-4xl font-bold text-center  pb-10">
           Exploring Investment Opportunities in the UK?
         </h2>
-        <p className="text-3xl text-center mb-12">
+        <p className="text-xl text-center mb-12 max-w-[700px] mx-auto">
           Explore curated UK pitch decks from promising entrepreneurs, poised to
           make a lasting impact
         </p>
@@ -104,7 +104,9 @@ export default function InvestorPitchDeckShowcase({
           {currentDecks.map((deck, idx) => (
             <div
               key={idx} // Changed to index to handle duplicated items
-              className="relative bg-white text-gray-800 rounded-xl shadow-2xl overflow-hidden"
+              className="relative text-white  rounded-xl shadow-2xl overflow-hidden
+              bg-gradient-to-br from-primary to-red-700
+              "
             >
               <div className="absolute top-4 right-4 bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                 Featured
@@ -116,7 +118,7 @@ export default function InvestorPitchDeckShowcase({
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <h3 className="text-2xl font-bold mb-2">{deck.name}</h3>
-                <p className="flex items-center text-gray-600 mb-4">
+                <p className="flex items-center text-white mb-4">
                   <MapPin className="w-4 h-4 mr-1" />
                   {deck.location}
                 </p>
@@ -129,23 +131,18 @@ export default function InvestorPitchDeckShowcase({
                     </li>
                   ))}
                 </ul>
-                <div className="bg-gray-100 p-4 rounded-lg">
+                <div className=" p-4 rounded-lg">
                   <div className="flex justify-between mb-2">
                     <span className="font-semibold">Total Raised:</span>
-                    <span className="text-green-600">
-                      {deck.funding.raised}
-                    </span>
+                    <span className="text-white">{deck.funding.raised}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-semibold">Seeking:</span>
-                    <span className="text-blue-600">
-                      {deck.funding.seeking}
-                    </span>
+                    <span className="text-white">{deck.funding.seeking}</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-center">
-                  {" "}
-                  <button className="inline-block mx-auto bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg mt-6 transition duration-300 text-2xl">
+                  <button className="  text-gl  bg-white text-primary font-bold py-1 px-6 mt-5 rounded-full transition duration-300">
                     View Full Pitch Deck
                   </button>
                 </div>
@@ -157,24 +154,24 @@ export default function InvestorPitchDeckShowcase({
         <div className="flex justify-center mt-8 space-x-4">
           <button
             onClick={prevDecks}
-            className="bg-white text-red-600 hover:bg-red-100 p-2 rounded-full transition duration-300"
+            className="bg-primary text-white hover:bg-red-300 p-2 rounded-full transition duration-300"
           >
             <ChevronLeft className="w-10 h-10" />
           </button>
           <button
             onClick={nextDecks}
-            className="bg-white text-red-600 hover:bg-red-100 p-2 rounded-full transition duration-300"
+            className="bg-primary text-white hover:bg-red-300 p-2 rounded-full transition duration-300"
           >
             <ChevronRight className="w-10 h-10" />
           </button>
         </div>
 
-        <p className="text-center mt-12 text-3xl">
+        <p className="text-center mt-12 text-2xl">
           Browse innovative business ideas, startups, and funding needs from
           entrepreneurs across the UK
         </p>
         <div className="text-center mt-6">
-          <button className="bg-white text-red-600 hover:bg-red-100 font-bold py-3 px-8 rounded-full text-3xl transition duration-300">
+          <button className="bg-primary text-white hover:bg-red-100 font-bold py-1 px-6 rounded-full text-xl transition duration-300">
             Browse Pitch Decks
           </button>
         </div>

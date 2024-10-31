@@ -106,23 +106,25 @@ const Industries: React.FC = () => {
         <h2 className="text-5xl font-bold mb-6 text-center text-primary ">
           Our Industries
         </h2>
-        <p className="text-2xl text-center text-gray-600 mb-10 pb-5">
+        <p className="text-xl text-center text-primary mb-10 pb-5 max-w-[800px] mx-auto">
           We connect investors with startups and businesses from all sectors to
           ensure the relationship is valuable to both parties.
         </p>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-6">
           {industries.map((industry) => (
-            <li
+            <div
               key={industry.name}
-              className="flex items-center bg-primary shadow-md rounded-lg p-4"
+              className="flex flex-col items-center bg-red-700 shadow-lg rounded-lg p-4  justify-center"
             >
-              <div className=" text-white mr-4 text-4xl">{industry.icon}</div>
-              <span className="text-lg font-semibold text-white">
+              <div className=" text-white mr-4 text-4xl text-center">
+                {industry.icon}
+              </div>
+              <span className="text-sm mt-2 text-center font-semibold text-white">
                 {industry.name}
               </span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );
