@@ -14,7 +14,7 @@ const services = [
       "Our experienced accountants provide comprehensive financial management, ensuring accurate bookkeeping, tax preparation, and strategic financial advice to keep your business on track.",
     data: [
       "Accountants ",
-      "financial statements, bookkeeping,",
+      "financial statements, bookkeeping",
       "tax compliance",
       "Tax Advisors",
       "personal and",
@@ -31,10 +31,11 @@ const services = [
 
     data: [
       "Solicitors & Lawyers",
-      "corporate law,  ",
-      "intellectual property,",
+      "corporate law",
+      "intellectual property",
       "contract law",
-      "Compliance Specialists (FCA compliance, regulatory guidance)",
+      "Compliance Specialists",
+      "FCA compliance, regulatory guidance",
       "Will Services & Estate Planning",
       "Patent Attorneys",
       "Trademark Specialists",
@@ -90,7 +91,7 @@ const services = [
       "Our valuation experts assess your business's worth, providing accurate and detailed reports to support investment decisions, mergers, acquisitions, or financing needs.",
     data: [
       "Insurance Brokers",
-      "business insurance,",
+      "business insurance",
       "liability",
       "Risk Assessment Consultants",
       "Health & Safety Consultants",
@@ -114,12 +115,13 @@ const services = [
     description:
       "Our solicitors specialize in legal matters, offering expert guidance in contract negotiations, compliance, and dispute resolution to protect your interests and navigate complex regulations.",
     data: [
-      "IT Consultants systems integration,",
+      "IT Consultants systems integration",
       "network security",
       "Cybersecurity Experts",
       "Cloud Computing Specialists",
       "Software Development Firms",
-      "Blockchain & Cryptocurrency Advisors",
+      "Blockchain",
+      "Cryptocurrency Advisors",
     ],
   },
 ];
@@ -154,7 +156,7 @@ export default function ProfessionalServices() {
                         {" "}
                         <span
                           key={index}
-                          className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full "
+                          className="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-sm "
                         >
                           {item}
                         </span>
