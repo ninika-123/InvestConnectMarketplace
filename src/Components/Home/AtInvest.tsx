@@ -1,6 +1,6 @@
 export default function AtInvest() {
   return (
-    <section className="bg-white py-10 ">
+    <section className="bg-white py-10 px-5">
       <div
         data-aos="fade-left"
         className="max-w-[1150px] mx-auto text-center px-4"

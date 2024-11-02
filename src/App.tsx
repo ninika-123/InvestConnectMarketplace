@@ -11,7 +11,7 @@ import TrustedPartners from "./Components/Home/TrustedPartners";
 
 function App() {
   return (
-    <main>
+    <main className="overflow-hidden">
       <Hero />
       <OurUniqueSelling />
       <InvestorPitchDeckShowcase />

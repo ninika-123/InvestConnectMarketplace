@@ -106,11 +106,11 @@ const Industries: React.FC = () => {
         <h2 className="text-5xl font-bold mb-6 text-center text-primary ">
           Our Industries
         </h2>
-        <p className="text-xl text-center text-primary mb-10 pb-5 max-w-[800px] mx-auto">
+        <p className="text-xl text-center text-primary mb-10 pb-5 w-full xl:max-w-[800px] mx-auto text-wrap">
           We connect investors with startups and businesses from all sectors to
           ensure the relationship is valuable to both parties.
         </p>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 px-">
           {industries.map((industry) => (
             <div
               key={industry.name}

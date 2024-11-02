@@ -1,112 +1,134 @@
-import img from "../../assets/share/logo.jpg";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MdOutlineMenuOpen } from "react-icons/md";
 import { RiCloseFill } from "react-icons/ri";
-import { menu } from "../../contest/header";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/share/logo.jpg";
+// Assuming this is how your menu is structured
+const menu = [
+  { id: 1, name: "Home", path: "/" },
+  { id: 2, name: "About", path: "/about" },
+  { id: 3, name: "Services", path: "/services" },
+  { id: 4, name: "Contact", path: "/contact" },
+];
 
 const Header = () => {
   const path = useLocation().pathname;
   const [open, setOpen] = useState(false);
   const headerRef = useRef<HTMLElement | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
       ref={headerRef}
-      className="z-[2000] py-2 transition-all duration-300 ease-in-out sticky top-0 bg-white shadow-lg "
+      className={`z-50 py-2 transition-all duration-300 ease-in-out sticky top-0 bg-white ${
+        scrolled ? "shadow-lg" : ""
+      }`}
     >
-      <div>
-        {" "}
-        <div className="container px-5 py-1 mx-auto ">
-          <div className="flex justify-between lg:items-center">
-            {/* Logo */}
-            <div className="flex items-center title-font font-medium gap-5">
-              <img src={img} alt="logo" className="w-[100px]" />
-              <div className="font-bold text-2xl text-[#ff3636] ">
-                <h1>
-                  INVEST CONNECT{" "}
-                  <span className="italic capitalize ">Marketplace</span>
-                  <h2 className="italic capitalize text-2xl"></h2>
-                </h1>
-              </div>
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center space-x-3 sm:space-x-5">
+            <img src={logo} alt="logo" className="w-12 h-12 sm:w-16 sm:h-16" />
+            <div className="font-bold text-lg sm:text-2xl text-[#ff3636]">
+              <h1>
+                INVEST CONNECT{" "}
+                <span className="italic capitalize block text-sm sm:text-base">
+                  Marketplace
+                </span>
+              </h1>
             </div>
-
-            {/* Desktop Navigation */}
-            <div className="hidden xl:flex w-[90%] justify-end items-center mr-5">
-              <nav className="flex space-x-5 text-base font-bold">
-                {menu.map((item) => (
-                  <Link to={item.path} key={item.id} className="text-primary">
-                    {item.name}
-                  </Link>
-                ))}
-
-                {/* Action Buttons */}
-                <div className="flex gap-4 ">
-                  <button
-                    className={`bg-primary text-white
-                
-                px-5 py-1 rounded-lg font-bold text-2xl
-              
-              `}
-                  >
-                    Login
-                  </button>
-                  <button
-                    className={`bg-primary text-white  px-5 py-1 rounded-lg font-bold text-2xl`}
-                  >
-                    Register
-                  </button>
-                </div>
-              </nav>
-            </div>
-
-            {/* Mobile Menu Toggle */}
-            <button
-              className={`xl:hidden ! text-5xl w-[48px] h-[48px] focus:outline-none z-[300]`}
-              onClick={() => setOpen(!open)}
-            >
-              {open ? (
-                <RiCloseFill className="text-primary" color="red" />
-              ) : (
-                <MdOutlineMenuOpen className="text-primary" color="red" />
-              )}
-            </button>
           </div>
 
-          {/* Mobile Navigation */}
-          {open && (
-            <div className="absolute left-0 top-0 w-full h-[500px] z-[210] bg-white text-primary">
-              <div className="w-full xl:hidden mt-4">
-                <nav className="flex flex-col items-center space-y-4 text-2xl font-bold capitalize">
-                  {menu.map((item) => (
-                    <Link to={item.path} key={item.id}>
-                      {item.name}
-                    </Link>
-                  ))}
-                </nav>
-                <div className="flex flex-col gap-4 items-center mt-5">
-                  <button
-                    className={`w-1/2 ${
-                      path !== "/"
-                        ? "bg-primary text-white"
-                        : "bg-white text-primary"
-                    } px-5 py-1 rounded-lg font-bold text-2xl`}
-                  >
-                    Login
-                  </button>
-                  <button
-                    className={`w-1/2 ${
-                      path !== "/"
-                        ? "bg-primary text-white"
-                        : "bg-white text-primary"
-                    } px-5 py-1 rounded-lg font-bold text-2xl`}
-                  >
-                    Register
-                  </button>
-                </div>
-              </div>
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-6">
+            <nav className="flex space-x-4 text-sm font-bold">
+              {menu.map((item) => (
+                <Link
+                  to={item.path}
+                  key={item.id}
+                  className="text-primary capitalize hover:text-[#ff3636] transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex space-x-3">
+              <button className="bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-[#ff3636] transition-colors">
+                Login
+              </button>
+              <button className="bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm hover:bg-[#ff3636] transition-colors">
+                Register
+              </button>
             </div>
-          )}
+          </div>
+
+          {/* Mobile Menu Toggle */}
+          <button
+            className="lg:hidden text-3xl focus:outline-none z-50 px-5"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+          >
+            {open ? (
+              <RiCloseFill className="text-primary" />
+            ) : (
+              <MdOutlineMenuOpen className="text-primary" />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`fixed inset-0 z-40 bg-white transform ${
+            open ? "translate-x-0" : "translate-x-full"
+          } transition-transform duration-300 ease-in-out lg:hidden`}
+        >
+          <div className="flex flex-col h-full justify-center items-center">
+            <nav className="flex flex-col items-center space-y-6 text-xl font-bold capitalize">
+              {menu.map((item) => (
+                <Link
+                  to={item.path}
+                  key={item.id}
+                  className="text-primary hover:text-[#ff3636] transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+            <div className="flex flex-col space-y-4 mt-8">
+              <button
+                className={`w-48 ${
+                  path !== "/"
+                    ? "bg-primary text-white"
+                    : "bg-white text-primary border border-primary"
+                } px-5 py-2 rounded-lg font-bold text-lg hover:bg-[#ff3636] hover:text-white transition-colors`}
+              >
+                Login
+              </button>
+              <button
+                className={`w-48 ${
+                  path !== "/"
+                    ? "bg-primary text-white"
+                    : "bg-white text-primary border border-primary"
+                } px-5 py-2 rounded-lg font-bold text-lg hover:bg-[#ff3636] hover:text-white transition-colors`}
+              >
+                Register
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>

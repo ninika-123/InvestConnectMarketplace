@@ -18,7 +18,7 @@ export default function Hero() {
               secure funding, and professionals offer essential services,
               driving growth and success in one dynamic marketplace.
             </p>
-            <div className="flex items-center gap-5 mt-7">
+            <div className="flex flex-col items-center gap-5 mt-7">
               <p className="text-3xl">I am looking to</p>
               <Dropdown />
             </div>

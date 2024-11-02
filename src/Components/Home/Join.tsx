@@ -1,6 +1,6 @@
 function Join() {
   return (
-    <section className="w-full bg-slate-300 text-black py-20">
+    <section className="w-full bg-slate-300 text-black py-20 px-5">
       <div className="w-full text-center max-w-[1200px] mx-auto flex flex-col gap-6 md:px-5 px-3">
         <h4 className=" text-3xl font-semibold leading-11 text-black ">
           Join our expanding marketplace and transform connections into
