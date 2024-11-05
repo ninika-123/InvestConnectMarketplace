@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18  # Use your desired Node.js version
+    commands:
+      - echo Installing dependencies with Yarn...
+      - yarn install
+  build:
+    commands:
+      - echo Building the React app with Yarn...
+      - yarn build
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build  # This is the default output directory for React
