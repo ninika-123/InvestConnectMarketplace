@@ -7,12 +7,25 @@ import {
 } from "react-icons/fa";
 import { SiBloglovin } from "react-icons/si";
 import logo from "../../assets/share/logo.jpg";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
-  { id: "1", icon: <FaLinkedinIn />, href: "#" },
-  { id: "2", icon: <FaFacebookF />, href: "#" },
-  { id: "3", icon: <FaTwitter />, href: "#" },
-  { id: "4", icon: <FaInstagram />, href: "#" },
+  {
+    id: "1",
+    icon: <FaLinkedinIn />,
+    href: "https://www.linkedin.com/company/investconnectmarketplace/?viewAsMember=true",
+  },
+  {
+    id: "2",
+    icon: <FaFacebookF />,
+    href: "https://www.facebook.com/profile.php?id=61567537067894&rdid=gRwSRBMQsBM49AJY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KsV32U8yw%2F",
+  },
+  { id: "3", icon: <FaTwitter />, href: "https://x.com/InvestConnect24" },
+  {
+    id: "4",
+    icon: <FaInstagram />,
+    href: "https://www.instagram.com/investconnectmarketplace/?igsh=MjFnY3lheGt3ZXZo",
+  },
   { id: "5", icon: <SiBloglovin />, href: "#" },
 ];
 
@@ -86,15 +99,15 @@ export default function Footer() {
 
           <div className="flex flex-wrap lg:w-auto w-full sm:mt-0 mt-2 lg:justify-end justify-center items-center">
             {socialLinks.map((link) => (
-              <a
+              <Link
                 key={link.id}
-                href={link.href}
+                to={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white p-2 hover:bg-gray-300 rounded-full text-lg shadow-md text-black mr-3 flex items-center justify-center transition-all duration-300"
               >
                 {link.icon}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -108,14 +121,14 @@ export default function Footer() {
                 <ul className="list-none flex items-center gap-3 flex-col">
                   {latestBlogs.map((blog) => (
                     <li key={blog.id}>
-                      <a
+                      <Link
                         className="lg:py-0.5 py-2 block text-lg text-white hover:text-gray-300"
-                        href={blog.href}
+                        to={blog.href}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {blog.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -129,12 +142,12 @@ export default function Footer() {
                 <ul className="list-none mb-10">
                   {navigationLinks.map((link) => (
                     <li key={link.title}>
-                      <a
+                      <Link
                         className="lg:py-0.5 py-2 block text-lg text-white hover:text-gray-300"
-                        href={link.href}
+                        to={link.href}
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -146,12 +159,12 @@ export default function Footer() {
                 <ul className="list-none mb-10">
                   {entrepreneurLinks.map((link) => (
                     <li key={link.title}>
-                      <a
+                      <Link
                         className="lg:py-0.5 py-2 block text-lg text-white hover:text-gray-300"
-                        href={link.href}
+                        to={link.href}
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -163,12 +176,12 @@ export default function Footer() {
                 <ul className="list-none mb-10">
                   {investorLinks.map((link) => (
                     <li key={link.title}>
-                      <a
+                      <Link
                         className="lg:py-0.5 py-2 block text-lg text-white hover:text-gray-300"
-                        href={link.href}
+                        to={link.href}
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -180,12 +193,12 @@ export default function Footer() {
                 <ul className="list-none mb-10">
                   {serviceProviderLinks.map((link) => (
                     <li key={link.title}>
-                      <a
+                      <Link
                         className="lg:py-0.5 py-2 block text-lg text-white hover:text-gray-300"
-                        href={link.href}
+                        to={link.href}
                       >
                         {link.title}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

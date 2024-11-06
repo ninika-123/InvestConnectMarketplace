@@ -14,18 +14,22 @@ const ContactForm: React.FC = () => {
     {
       id: "1",
       icons: <FaLinkedinIn />,
+      href: "https://www.linkedin.com/company/investconnectmarketplace/?viewAsMember=true",
     },
     {
       id: "4",
       icons: <FaInstagram />,
+      href: "https://www.instagram.com/investconnectmarketplace/?igsh=MjFnY3lheGt3ZXZo",
     },
     {
       id: "2",
       icons: <FaFacebookF />,
+      href: "https://www.facebook.com/profile.php?id=61567537067894&rdid=gRwSRBMQsBM49AJY&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1KsV32U8yw%2F",
     },
     {
       id: "3",
       icons: <FaTwitter />,
+      href: "https://x.com/InvestConnect24",
     },
 
     {
@@ -33,6 +37,7 @@ const ContactForm: React.FC = () => {
       icons: <SiBloglovin />,
     },
   ];
+
   return (
     <div className=" bg-white ">
       {" "}
