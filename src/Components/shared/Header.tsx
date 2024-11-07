@@ -3,13 +3,14 @@ import { MdOutlineMenuOpen } from "react-icons/md";
 import { RiCloseFill } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/share/logo.jpg";
-// Assuming this is how your menu is structured
-const menu = [
-  { id: 1, name: "Home", path: "/" },
-  { id: 2, name: "About", path: "/about" },
-  { id: 3, name: "Services", path: "/services" },
-  { id: 4, name: "Contact", path: "/contact" },
-];
+import { menu } from "../../contest/header";
+// // Assuming this is how your menu is structured
+// const menu = [
+//   { id: 1, name: "Home", path: "/" },
+//   { id: 2, name: "About", path: "/about" },
+//   { id: 3, name: "Services", path: "/services" },
+//   { id: 4, name: "Contact", path: "/contact" },
+// ];
 
 const Header = () => {
   const path = useLocation().pathname;
